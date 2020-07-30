@@ -1,7 +1,10 @@
 body {
-    background-image: url("/static/img/background.jpg");
-    background-size: cover;
+    /*background-image: url("/static/img/background.jpg");*/
+    background-image: url("/static/img/international_space_station_view_space_day_time_clouds_earth_northern_europe_ocean-1030912.jpg!d.jpeg");
+    background-position: center center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 #main_content {
@@ -10,24 +13,24 @@ body {
     margin-top: 2%;
 }
 
-#menu{
-background-color: #f2f2f2;
-padding: 20px;
-color: black;
-border-color: #cccccc;
+#menu {
+    background-color: #f2f2f2;
+    padding: 20px;
+    color: black;
+    border-color: #cccccc;
 }
 
 .title {
     font-size: 50px;
+    color: #cccccc;
 }
+
 .table {
-    background-color: white;
-    opacity: 0.8;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 .button {
     background-color: #e6e6e6;
-    opacity: 1;
     border-radius: 5px;
 }
 
@@ -35,6 +38,8 @@ border-color: #cccccc;
     width: auto;
 }
 
-#login {
-    display: inline-block;
+.modal-body, th {
+    width: auto !important;
+    overflow: auto;
 }
+

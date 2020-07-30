@@ -34,21 +34,3 @@ def get_users(cursor):
         '''SELECT username FROM users'''
     )
     return cursor.fetchall()
-
-
-@connection.connection_handler
-def get_user_id(cursor, user_name):
-    cursor.execute(
-        '''SELECT id FROM users
-        WHERE username = %(user_name)s;''', {'user_name': user_name}
-    )
-    user_id = cursor.fetchone()
-    return user_id
-
-
-@connection.connection_handler
-def save_vote(cursor, data):
-    cursor.execute(
-        '''INSERT INTO planet_votes (planet_id, planet_name, user_id, submission_time)
-         VALUES (%(planetId)s, %(planetName)s, %(user_id)s, CURRENT_TIMESTAMP);''', data
-    )

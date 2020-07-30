@@ -6,7 +6,7 @@
         <a href="{{ url_for("login")}}" class="btn">Login</a>
     {% endif %}
     {%  if username %}
-        Login: <div id="login">{{ session['username'] }}</div>
+        Login: {{ session['username'] }}
         <a href="{{ url_for("logout")}}" class="btn">Logout</a>
     {% endif %}
 </div>

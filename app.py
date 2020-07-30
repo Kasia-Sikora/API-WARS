@@ -54,14 +54,25 @@ def login():
 
 @app.route('/logout')
 def logout():
+    # remove the username from the session if it's there
     session.pop('username', None)
     return redirect(url_for('index'))
 
 
-@app.route('/save-vote-data', methods=['POST'])
-def save_vote():
+@app.route('/users')
+def users():
+    users = data_manager.get_users()
+    print(users)
+    return json.dumps(users[0])
+
+
+@app.route('/post-method', methods=['POST'])
+def post():
     data = request.get_json()
-    user_id = data_manager.get_user_id(data['user'])
-    data['user_id'] = user_id['id']
-    data_manager.save_vote(data)
-    return None
+    print(dir(request))
+    print(data)
+    return '{}'
+
+
+if __name__ == '__main__':
+    app.run()
