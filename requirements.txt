@@ -38,7 +38,7 @@ pycrypto==2.6.1
 Pygments==2.2.0
 pygobject==3.26.1
 pyxdg==0.25
-PyYAML==3.12
+PyYAML==5.1
 requests==2.23.0
 scandir==1.7
 SecretStorage==2.3.1
